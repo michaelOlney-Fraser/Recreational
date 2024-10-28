@@ -1,0 +1,7 @@
+n squares on the board 
+n dimensional cube represents possible board states 
+this gives 2^n possible board states,
+which we need to encode into n distinct values.
+this is done using an n x n connection matrix, which assigns, for each dimension,
+a value that the current value connects to. This has n^2 elements. 
+
