@@ -1,4 +1,4 @@
-import prisoner_functions as p
+import save_chessboard_pdf as p
 
 print("The warden has set the board: Prisoner 1 enters the room and sees it.")
 

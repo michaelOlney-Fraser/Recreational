@@ -1,4 +1,4 @@
-import prisoner_functions as p
+import save_chessboard_pdf as p
 import numpy as np
 
 # Simple Python script to take user input and display output

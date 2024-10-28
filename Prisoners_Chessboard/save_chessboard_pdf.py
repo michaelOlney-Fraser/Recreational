@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.table import Table
+import sys
 
 def generate_connection_matrix(board_size): 
 
@@ -108,7 +109,7 @@ def flip_this_coin(key_position, heads_list, connection_matrix):
 
 
 
-def make_table(connection_matrix):
+def make_table(connection_matrix, name):
     matrix = connection_matrix
 
     # Create a figure and axis
@@ -132,6 +133,20 @@ def make_table(connection_matrix):
     ax.add_table(table)
 
     # Save the figure to a PDF
-    plt.savefig('matrix.pdf', bbox_inches='tight', pad_inches=0.1, dpi=300)
+    plt.savefig(f'{name}.pdf', bbox_inches='tight', pad_inches=0.1, dpi=300)
 
+###################################################################################################################################
 
+def main():
+
+    board_size = 16
+    board_name = '16x16'
+    assert board_size % 2 == 0
+
+    conn_mat = generate_connection_matrix(board_size) 
+
+    make_table(conn_mat, board_name)
+
+###################################################################################################################################
+if __name__ == "__main__":
+    sys.exit(main())
